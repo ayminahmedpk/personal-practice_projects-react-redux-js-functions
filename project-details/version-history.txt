@@ -1,0 +1,6 @@
+
+
+0.1.0:
+  - cleaned source folder
+  - installed packages for working with redux
+  - init

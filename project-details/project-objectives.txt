@@ -1,0 +1,6 @@
+
+
+To practice react redux with functional syntax and hooks like useDispatch,
+useSelector, etc.
+
+To practice with the old store creation method, not the new RTK syntax.
