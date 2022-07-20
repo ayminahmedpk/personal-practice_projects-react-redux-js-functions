@@ -1,5 +1,11 @@
 
 
+
+0.1.1:
+  - class components connected
+  - imported store and components from class version
+
+
 0.1.0:
   - cleaned source folder
   - installed packages for working with redux

@@ -18,6 +18,14 @@ button {
   cursor: pointer;
 }
 
+/* .branches { display: flex; } */
+
+.branch {
+  margin-top: 1rem;
+  width: 100%;
+  border: 1px solid white;
+}
+
 
 .lesson-root { text-align: center; }
 
