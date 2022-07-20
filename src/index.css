@@ -18,7 +18,7 @@ button {
   cursor: pointer;
 }
 
-/* .branches { display: flex; } */
+.branches { display: flex; }
 
 .branch {
   margin-top: 1rem;

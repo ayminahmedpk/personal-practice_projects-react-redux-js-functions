@@ -1,34 +1,32 @@
 
 
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React from 'react'
+
+import { useSelector } from 'react-redux/es/hooks/useSelector'
+import { useDispatch } from 'react-redux/es/hooks/useDispatch'
 
 import { reset } from '../../Redux/globalActionCreators'
 import { textChange } from '../../Redux/text/textActionCreators'
 
-export class TextController extends Component {
-  render() {
-    return (
-      <div className='component'>
-        <p className="component__name">TextController</p>
-        <input
-          type="text"
-          value={this.props.text}
-          onChange={this.props.textChange}
-        />
-        <button onClick={this.props.reset}>Reset</button>
-      </div>
-    )
-  }
+
+const TextController = () => {
+
+  const text = useSelector(state => state.textReducer.text);
+
+  const dispatch = useDispatch();
+
+  return (
+    <div className='component'>
+      <p className="component__name">TextController</p>
+      <input
+        type="text"
+        value={text}
+        onChange={(event) => dispatch(textChange(event))}
+      />
+      <button onClick={() => dispatch(reset())}>Reset</button>
+    </div>
+  )
 }
 
-const mapStateToProps = (state) => ({
-  text: state.textReducer.text
-})
 
-const mapDispatchToProps = {
-  textChange,
-  reset
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(TextController)
+export default TextController;

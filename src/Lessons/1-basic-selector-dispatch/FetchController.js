@@ -1,22 +1,20 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-import { connect } from 'react-redux'
+import { useDispatch } from 'react-redux/es/hooks/useDispatch'
 
 import { makeRequest } from '../../Redux/users/usersActionCreators'
 
-export class FetchController extends Component {
-  render() {
-    return (
-      <>
-        <div>FetchController</div>
-        <button onClick={this.props.makeRequest}>Make Request</button>
-      </>
-    )
-  }
+
+const FetchController = () => {
+
+  const dispatch = useDispatch()
+
+  return (
+    <div className="component">
+      <div className="component__name">FetchController</div>
+      <button onClick={() => dispatch(makeRequest())}>Make Request</button>
+    </div>
+  )
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  makeRequest: () => dispatch(makeRequest())
-})
-
-export default connect(null, mapDispatchToProps)(FetchController)
+export default FetchController;

@@ -1,5 +1,9 @@
 
 
+0.1.2:
+  - all components made to use hooks (useSelector and/or useDispatch) instead
+    of connect, mapStateToProps, mapDispatchToProps
+  - all components (not branches) made functional
 
 0.1.1:
   - class components connected
